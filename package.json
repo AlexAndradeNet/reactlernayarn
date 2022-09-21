@@ -12,6 +12,6 @@
     "clean": "lerna clean --yes",
     "transpile": "cd ./packages/common && yarn transpile",
     "web-start": "cd ./packages/webapp && yarn start",
-	  "audit:fix": "npx yarn-audit-fix"
+    "audit:fix": "npx yarn-audit-fix"
   }
 }
