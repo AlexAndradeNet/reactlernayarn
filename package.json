@@ -12,6 +12,10 @@
     "clean": "lerna clean --yes",
     "transpile": "cd ./packages/common && yarn transpile",
     "web-start": "cd ./packages/webapp && yarn start",
-    "audit:fix": "npx yarn-audit-fix"
+    "audit:fix": "npx yarn-audit-fix",
+    "test:clean": "watchman watch-del './' ; watchman watch-project './'",
+    "test-web": "yarn test:clean && cd ./packages/webapp && yarn test /a --watchAll=false",
+    "test": "yarn test-web",
+    "build": "cd ./packages/webapp && yarn build"
   }
 }
