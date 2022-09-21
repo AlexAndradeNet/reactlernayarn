@@ -4,9 +4,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-              sh "yarn"
-              sh "yarn bs"
-              sh "yarn transpile"
+                sh "apt-get update"
+                sh "apt-get install yarn"
+                sh "apt-get install watchman"
+                sh "yarn"
+                sh "yarn bs"
+                sh "yarn transpile"
             }
         }
         stage('Test') {
