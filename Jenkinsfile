@@ -4,12 +4,11 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh "apt-get update"
-                sh "apt-get install yarn -y"
-                sh "apt-get install watchman -y"
-                sh "yarn"
-                sh "yarn bs"
-                sh "yarn transpile"
+                nodejs('node18') {
+                    sh 'yarn'
+                    sh 'yarn bs'
+                    sh 'yarn transpile'
+                }
             }
         }
         stage('Test') {
@@ -25,8 +24,10 @@ pipeline {
             }
             steps {
                 echo 'Deploying....'
-                sh "yarn build"
-                sh "yarn web-start"
+                nodejs('node18') {
+                    sh "yarn build"
+                    sh "yarn web-start"
+                }
             }
         }
     }
