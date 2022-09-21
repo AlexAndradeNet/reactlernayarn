@@ -4,9 +4,9 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-              yarn
-              yarn bs
-              yarn transpile
+              sh "yarn"
+              sh "yarn bs"
+              sh "yarn transpile"
             }
         }
         stage('Test') {
@@ -22,8 +22,8 @@ pipeline {
             }
             steps {
                 echo 'Deploying....'
-                yarn build
-                yarn web-start
+                sh "yarn build"
+                sh "yarn web-start"
             }
         }
     }
