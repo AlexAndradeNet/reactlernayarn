@@ -1,0 +1,16 @@
+{
+  "name": "root",
+  "private": true,
+  "devDependencies": {
+    "lerna": "^5.5.2"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "bs": "lerna bootstrap",
+    "clean": "lerna clean --yes",
+    "transpile": "cd ./packages/common && yarn transpile",
+    "web-start": "cd ./packages/webapp && yarn start"
+  }
+}
