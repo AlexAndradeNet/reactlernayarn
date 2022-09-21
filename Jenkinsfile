@@ -5,6 +5,9 @@ pipeline {
         stage('Setup') {
             steps {
                 sh 'apt-get install build-essential -y'
+                nodejs('node18') {
+                    sh 'npm install --global yarn'
+                }
             }
         }
         stage('Build') {
@@ -31,7 +34,6 @@ pipeline {
                 echo 'Deploying....'
                 nodejs('node18') {
                     sh "yarn build"
-                    sh "yarn web-start"
                 }
             }
         }
