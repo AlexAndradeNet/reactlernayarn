@@ -5,8 +5,8 @@ pipeline {
         stage('Build') {
             steps {
                 sh "apt-get update"
-                sh "apt-get install yarn"
-                sh "apt-get install watchman"
+                sh "apt-get install yarn -y"
+                sh "apt-get install watchman -y"
                 sh "yarn"
                 sh "yarn bs"
                 sh "yarn transpile"
