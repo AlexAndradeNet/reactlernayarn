@@ -2,6 +2,11 @@ pipeline {
     agent any
 
     stages {
+        stage('Setup') {
+            steps {
+                sh 'apt-get install build-essential -y'
+            }
+        }
         stage('Build') {
             steps {
                 nodejs('node18') {
