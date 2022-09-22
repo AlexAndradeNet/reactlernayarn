@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Setup') {
             steps {
-                sh 'apt-get install build-essential -y'
+                sh 'apt-get update'
+                sh 'apt-get install build-essential watchman -y'
                 nodejs('node18') {
                     sh 'npm install --global yarn'
                 }
