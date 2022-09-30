@@ -27,6 +27,7 @@ pipeline {
                 }
                 script {
                     junit "packages/webapp/junit.xml"
+                    junit "junit2.xml"
                 }
             }
         }
