@@ -25,7 +25,10 @@ pipeline {
               nodejs('node18') {
                     sh "yarn test"
                 }
-                postSharedTestReport()
+                script {
+                    junit (testResults: 'packages/webapp/junit.xml', allowEmptyResults: false)
+                    junit (testResults: 'junit2.xml', allowEmptyResults: false)
+                }
             }
         }
         stage('Deploy') {
@@ -38,21 +41,3 @@ pipeline {
         }
     }
 }
-
-void postSharedTestReport(){
-    script {
-        try {
-            junit (testResults: 'packages/webapp/junit.xml', allowEmptyResults: false)
-            junit (testResults: 'junit2.xml', allowEmptyResults: false)
-        } catch (err) {
-            script {
-                if (currentBuild.result != 'SUCCESS') {currentBuild.result = 'FAILURE'}
-            }
-        } finally {
-            script {
-                if (currentBuild.result != 'SUCCESS') {currentBuild.result = 'FAILURE'}
-            }
-        }
-    }
-}
-
