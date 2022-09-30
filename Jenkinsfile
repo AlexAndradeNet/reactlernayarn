@@ -47,7 +47,7 @@ pipeline {
 void postSharedTestReport(){
     script {
         try {
-            junit "packages/shared/coverage/clover.xml"
+            junit "packages/webapp/coverage/clover.xml"
             publishHTML (
                 target: [
                     allowMissing: true,
