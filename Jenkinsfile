@@ -25,6 +25,7 @@ pipeline {
               nodejs('node18') {
                     sh "yarn test"
                 }
+                postSharedTestReport()
             }
         }
         stage('Deploy') {
@@ -35,10 +36,9 @@ pipeline {
             }
             steps {
                 echo 'Deploying....'
-                nodejs('node18') {
+                /*nodejs('node18') {
                     sh "yarn build"
-                }
-                postSharedTestReport()
+                }*/
             }
         }
     }
@@ -53,7 +53,7 @@ void postSharedTestReport(){
                     allowMissing: true,
                     alwaysLinkToLastBuild: false,
                     keepAll: true,
-                    reportDir: "${WORKSPACE}/packages/shared/coverage/lcov-report",
+                    reportDir: "${WORKSPACE}/packages/webapp/coverage/lcov-report",
                     reportFiles: 'index.html',
                     reportName: "Test Shared Coverage Report"
                 ]
