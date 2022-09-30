@@ -36,9 +36,9 @@ pipeline {
             }
             steps {
                 echo 'Deploying....'
-                /*nodejs('node18') {
+                nodejs('node18') {
                     sh "yarn build"
-                }*/
+                }
             }
         }
     }
