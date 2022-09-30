@@ -16,7 +16,7 @@
     "audit:fix": "npx yarn-audit-fix",
     "test:clean": "watchman watch-del './' ; watchman watch-project './'",
     "test-web": "cd ./packages/webapp && yarn test --watchAll=false",
-    "test": "yarn test-web --coverage",
+    "test": "yarn test-web --coverage --reporters=default --reporters=jest-junit",
     "build": "cd ./packages/webapp && yarn build"
   }
 }

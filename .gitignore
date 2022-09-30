@@ -249,6 +249,7 @@ $RECYCLE.BIN/
 
 # testing
 /coverage
+junit.xml
 
 # production
 /build
