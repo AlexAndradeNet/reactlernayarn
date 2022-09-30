@@ -11,11 +11,12 @@
     "bs": "lerna bootstrap",
     "clean": "lerna clean --yes",
     "transpile": "cd ./packages/common && yarn transpile",
+    "bs-common": "cd ./packages/common && yarn install",
     "web-start": "cd ./packages/webapp && yarn start",
     "audit:fix": "npx yarn-audit-fix",
     "test:clean": "watchman watch-del './' ; watchman watch-project './'",
-    "test-web": "yarn test:clean && cd ./packages/webapp && yarn test /a --watchAll=false",
-    "test": "yarn test-web",
+    "test-web": "cd ./packages/webapp && yarn test --watchAll=false",
+    "test": "yarn test-web --coverage",
     "build": "cd ./packages/webapp && yarn build"
   }
 }
