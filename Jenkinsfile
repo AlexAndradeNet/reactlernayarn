@@ -48,16 +48,6 @@ void postSharedTestReport(){
     script {
         try {
             junit "packages/webapp/junit.xml"
-            publishHTML (
-                target: [
-                    allowMissing: true,
-                    alwaysLinkToLastBuild: false,
-                    keepAll: true,
-                    reportDir: "${WORKSPACE}/packages/webapp/coverage/lcov-report",
-                    reportFiles: 'index.html',
-                    reportName: "Test Shared Coverage Report"
-                ]
-            )
         } catch (err) {
             script {
                 if (currentBuild.result != 'SUCCESS') {currentBuild.result = 'FAILURE'}
