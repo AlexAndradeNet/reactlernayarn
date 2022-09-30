@@ -22,7 +22,9 @@ pipeline {
         }
         stage('Test') {
             steps {
-              echo 'Testing..'
+              nodejs('node18') {
+                    sh "yarn test"
+                }
             }
         }
         stage('Deploy') {
