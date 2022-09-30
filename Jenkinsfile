@@ -25,11 +25,9 @@ pipeline {
               nodejs('node18') {
                     sh "yarn test"
                 }
-                post {
-                    always {
-                        junit "packages/webapp/junit.xml"
-                        junit "junit2.xml"
-                    }
+                script {
+                    junit "packages/webapp/junit.xml"
+                    junit "junit2.xml"
                 }
             }
         }
