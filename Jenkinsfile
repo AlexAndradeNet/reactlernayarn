@@ -26,8 +26,12 @@ pipeline {
                     sh "yarn test"
                 }
                 script {
-                    junit "packages/webapp/junit.xml"
-                    junit "junit2.xml"
+                    withChecks('Web App') {
+                        junit "packages/webapp/junit.xml"
+                    }
+                    withChecks('Dummy') {
+                        junit "junit2.xml"
+                    }
                 }
             }
         }
