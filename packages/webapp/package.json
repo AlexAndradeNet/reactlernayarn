@@ -20,7 +20,8 @@
     ]
   },
   "jest-junit": {
-    "usePathForSuiteName": "true"
+    "usePathForSuiteName": "true",
+    "suiteName": "WebApp"
   },
   "eslintConfig": {
     "extends": [
