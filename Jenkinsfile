@@ -38,7 +38,35 @@ pipeline {
                 nodejs('node18') {
                     sh "yarn build"
                 }
+                postSharedTestReport()
             }
         }
     }
 }
+
+void postSharedTestReport(){
+    script {
+        try {
+            junit "packages/shared/coverage/clover.xml"
+            publishHTML (
+                target: [
+                    allowMissing: true,
+                    alwaysLinkToLastBuild: false,
+                    keepAll: true,
+                    reportDir: "${WORKSPACE}/packages/shared/coverage/lcov-report",
+                    reportFiles: 'index.html',
+                    reportName: "Test Shared Coverage Report"
+                ]
+            )
+        } catch (err) {
+            script {
+                if (currentBuild.result != 'SUCCESS') {currentBuild.result = 'FAILURE'}
+            }
+        } finally {
+            script {
+                if (currentBuild.result != 'SUCCESS') {currentBuild.result = 'FAILURE'}
+            }
+        }
+    }
+}
+
