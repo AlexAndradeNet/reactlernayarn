@@ -25,20 +25,17 @@ pipeline {
               nodejs('node18') {
                     sh "yarn test"
                 }
-                postSharedTestReport()
+                script {
+                    junit "packages/webapp/junit.xml"
+                }
             }
         }
         stage('Deploy') {
-            when {
-              expression {
-                currentBuild.result == null || currentBuild.result == 'SUCCESS' 
-              }
-            }
             steps {
                 echo 'Deploying....'
-                nodejs('node18') {
+                /*nodejs('node18') {
                     sh "yarn build"
-                }
+                }*/
             }
         }
     }
