@@ -25,14 +25,7 @@ pipeline {
               nodejs('node18') {
                     sh "yarn test"
                 }
-                script {
-                    withChecks('Web App') {
-                        junit (testResults: 'packages/webapp/junit.xml', allowEmptyResults: true)
-                    }
-                    withChecks('Dummy') {
-                        junit (testResults: 'junit2.xml', allowEmptyResults: true)
-                    }
-                }
+                postSharedTestReport()
             }
         }
         stage('Deploy') {
@@ -49,7 +42,8 @@ pipeline {
 void postSharedTestReport(){
     script {
         try {
-            junit "packages/webapp/junit.xml"
+            junit (testResults: 'packages/webapp/junit.xml', allowEmptyResults: false)
+            junit (testResults: 'junit2.xml', allowEmptyResults: false)
         } catch (err) {
             script {
                 if (currentBuild.result != 'SUCCESS') {currentBuild.result = 'FAILURE'}
