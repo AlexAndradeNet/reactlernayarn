@@ -27,10 +27,10 @@ pipeline {
                 }
                 script {
                     withChecks('Web App') {
-                        junit "packages/webapp/junit.xml"
+                        junit (testResults: 'packages/webapp/junit.xml', allowEmptyResults: true)
                     }
                     withChecks('Dummy') {
-                        junit "junit2.xml"
+                        junit (testResults: 'junit2.xml', allowEmptyResults: true)
                     }
                 }
             }

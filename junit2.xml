@@ -1,59 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="18" failures="0" errors="0" time="4.786">
-  <testsuite name="SignInForm" errors="0" failures="0" skipped="0" timestamp="2022-09-30T20:55:21" time="1.251" tests="8">
-    <testcase classname="SignInForm Initial render should display &apos;Email&apos; input field" name="SignInForm Initial render should display &apos;Email&apos; input field" time="0.009">
+<testsuites name="Web" tests="18" failures="0" errors="0" time="3.837">
+  <testsuite name="src/components/SignIn/SignInForm/index.test.js" errors="0" failures="0" skipped="0" timestamp="2022-09-30T21:38:49" time="1.119" tests="8">
+    <testcase classname="SignInForm &gt; SignInForm › Initial render-should display &apos;Email&apos; input field" name="SignInForm &gt; SignInForm › Initial render-should display &apos;Email&apos; input field" time="0.004">
     </testcase>
-    <testcase classname="SignInForm Initial render should display &apos;Password&apos; input field" name="SignInForm Initial render should display &apos;Password&apos; input field" time="0.001">
+    <testcase classname="SignInForm &gt; SignInForm › Initial render-should display &apos;Password&apos; input field" name="SignInForm &gt; SignInForm › Initial render-should display &apos;Password&apos; input field" time="0">
     </testcase>
-    <testcase classname="SignInForm Initial render Password: should have [type=password] attribute (where text entered is hidden)" name="SignInForm Initial render Password: should have [type=password] attribute (where text entered is hidden)" time="0">
+    <testcase classname="SignInForm &gt; SignInForm › Initial render-Password: should have [type=password] attribute (where text entered is hidden)" name="SignInForm &gt; SignInForm › Initial render-Password: should have [type=password] attribute (where text entered is hidden)" time="0.001">
     </testcase>
-    <testcase classname="SignInForm Initial render should display Log in button" name="SignInForm Initial render should display Log in button" time="0.006">
+    <testcase classname="SignInForm &gt; SignInForm › Initial render-should display Log in button" name="SignInForm &gt; SignInForm › Initial render-should display Log in button" time="0">
     </testcase>
-    <testcase classname="SignInForm Initial render should NOT display error message &apos;Login failed&apos; alert" name="SignInForm Initial render should NOT display error message &apos;Login failed&apos; alert" time="0.002">
+    <testcase classname="SignInForm &gt; SignInForm › Initial render-should NOT display error message &apos;Login failed&apos; alert" name="SignInForm &gt; SignInForm › Initial render-should NOT display error message &apos;Login failed&apos; alert" time="0.002">
     </testcase>
-    <testcase classname="SignInForm Component Behavior (from user actions) Email input should display the user-entered text" name="SignInForm Component Behavior (from user actions) Email input should display the user-entered text" time="0.072">
+    <testcase classname="SignInForm &gt; SignInForm › Component Behavior (from user actions) › Email input-should display the user-entered text" name="SignInForm &gt; SignInForm › Component Behavior (from user actions) › Email input-should display the user-entered text" time="0.081">
     </testcase>
-    <testcase classname="SignInForm Component Behavior (from user actions) Password input should NOT display the user-entered text when password visibility is off" name="SignInForm Component Behavior (from user actions) Password input should NOT display the user-entered text when password visibility is off" time="0.041">
+    <testcase classname="SignInForm &gt; SignInForm › Component Behavior (from user actions) › Password input-should NOT display the user-entered text when password visibility is off" name="SignInForm &gt; SignInForm › Component Behavior (from user actions) › Password input-should NOT display the user-entered text when password visibility is off" time="0.056">
     </testcase>
-    <testcase classname="SignInForm Component Behavior (from user actions) Password input should display the user-entered text when password visibility is toggled on" name="SignInForm Component Behavior (from user actions) Password input should display the user-entered text when password visibility is toggled on" time="0.071">
-    </testcase>
-  </testsuite>
-  <testsuite name="SignIn" errors="0" failures="0" skipped="0" timestamp="2022-09-30T20:55:21" time="1.391" tests="1">
-    <testcase classname="SignIn initial render signin should render without exceptions" name="SignIn initial render signin should render without exceptions" time="0.122">
+    <testcase classname="SignInForm &gt; SignInForm › Component Behavior (from user actions) › Password input-should display the user-entered text when password visibility is toggled on" name="SignInForm &gt; SignInForm › Component Behavior (from user actions) › Password input-should display the user-entered text when password visibility is toggled on" time="0.058">
     </testcase>
   </testsuite>
-  <testsuite name="&lt;ForgotPassword /&gt;" errors="0" failures="0" skipped="0" timestamp="2022-09-30T20:55:21" time="1.799" tests="1">
-    <testcase classname="&lt;ForgotPassword /&gt; render the component" name="&lt;ForgotPassword /&gt; render the component" time="0.182">
+  <testsuite name="src/components/SignIn/index.test.js" errors="0" failures="0" skipped="0" timestamp="2022-09-30T21:38:49" time="1.219" tests="1">
+    <testcase classname="SignIn &gt; SignIn › initial render signin-should render without exceptions" name="SignIn &gt; SignIn › initial render signin-should render without exceptions" time="0.115">
     </testcase>
   </testsuite>
-  <testsuite name="Renders Left Menu properly" errors="0" failures="0" skipped="0" timestamp="2022-09-30T20:55:22" time="0.524" tests="1">
-    <testcase classname="Renders Left Menu properly dummy test" name="Renders Left Menu properly dummy test" time="0.001">
+  <testsuite name="src/components/ForgotPassword/index.test.js" errors="0" failures="0" skipped="0" timestamp="2022-09-30T21:38:49" time="1.292" tests="1">
+    <testcase classname="&lt;ForgotPassword /&gt; &gt; &lt;ForgotPassword /&gt;-render the component" name="&lt;ForgotPassword /&gt; &gt; &lt;ForgotPassword /&gt;-render the component" time="0.185">
     </testcase>
   </testsuite>
-  <testsuite name="Attendance" errors="0" failures="0" skipped="0" timestamp="2022-09-30T20:55:22" time="0.682" tests="1">
-    <testcase classname="Attendance initial render dummy test" name="Attendance initial render dummy test" time="0.002">
+  <testsuite name="src/components/Header/index.test.js" errors="0" failures="0" skipped="0" timestamp="2022-09-30T21:38:50" time="0.423" tests="1">
+    <testcase classname="Header &gt; Header-dummy test" name="Header &gt; Header-dummy test" time="0.001">
     </testcase>
   </testsuite>
-  <testsuite name="Header" errors="0" failures="0" skipped="0" timestamp="2022-09-30T20:55:22" time="0.377" tests="1">
-    <testcase classname="Header dummy test" name="Header dummy test" time="0.002">
+  <testsuite name="src/components/Attendance/index.test.js" errors="0" failures="0" skipped="0" timestamp="2022-09-30T21:38:50" time="0.554" tests="1">
+    <testcase classname="Attendance &gt; Attendance › initial render-dummy test" name="Attendance &gt; Attendance › initial render-dummy test" time="0.001">
     </testcase>
   </testsuite>
-  <testsuite name="SignUp" errors="0" failures="0" skipped="0" timestamp="2022-09-30T20:55:21" time="3.738" tests="1">
-    <testcase classname="SignUp dummy test" name="SignUp dummy test" time="0.001">
+  <testsuite name="src/components/LeftMenu/index.test.js" errors="0" failures="0" skipped="0" timestamp="2022-09-30T21:38:50" time="0.391" tests="1">
+    <testcase classname="Renders Left Menu properly &gt; Renders Left Menu properly-dummy test" name="Renders Left Menu properly &gt; Renders Left Menu properly-dummy test" time="0.001">
     </testcase>
   </testsuite>
-  <testsuite name="undefined" errors="0" failures="0" skipped="0" timestamp="2022-09-30T20:55:21" time="3.812" tests="1">
-    <testcase classname=" renders form properly" name=" renders form properly" time="0.083">
+  <testsuite name="src/components/SignUp/index.test.js" errors="0" failures="0" skipped="0" timestamp="2022-09-30T21:38:49" time="2.956" tests="1">
+    <testcase classname="SignUp &gt; SignUp-dummy test" name="SignUp &gt; SignUp-dummy test" time="0.001">
     </testcase>
   </testsuite>
-  <testsuite name="PasswordField component" errors="0" failures="0" skipped="0" timestamp="2022-09-30T20:55:21" time="3.842" tests="2">
-    <testcase classname="PasswordField component renders the component" name="PasswordField component renders the component" time="0.046">
-    </testcase>
-    <testcase classname="PasswordField component toggle input type when click the eye button" name="PasswordField component toggle input type when click the eye button" time="0.063">
+  <testsuite name="src/components/SignUp/SignUpForm/index.test.js" errors="0" failures="0" skipped="0" timestamp="2022-09-30T21:38:49" time="2.995" tests="1">
+    <testcase classname="undefined &gt; -renders form properly" name="undefined &gt; -renders form properly" time="0.082">
     </testcase>
   </testsuite>
-  <testsuite name="Main" errors="0" failures="0" skipped="0" timestamp="2022-09-30T20:55:21" time="3.843" tests="1">
-    <testcase classname="Main initial render should render without exceptions" name="Main initial render should render without exceptions" time="0.109">
+  <testsuite name="src/components/SignUp/SignUpForm/PasswordFIeld/index.test.js" errors="0" failures="0" skipped="0" timestamp="2022-09-30T21:38:49" time="3.025" tests="2">
+    <testcase classname="PasswordField component &gt; PasswordField component-renders the component" name="PasswordField component &gt; PasswordField component-renders the component" time="0.046">
+    </testcase>
+    <testcase classname="PasswordField component &gt; PasswordField component-toggle input type when click the eye button" name="PasswordField component &gt; PasswordField component-toggle input type when click the eye button" time="0.063">
+    </testcase>
+  </testsuite>
+  <testsuite name="src/App.test.js" errors="0" failures="0" skipped="0" timestamp="2022-09-30T21:38:49" time="3.029" tests="1">
+    <testcase classname="Main &gt; Main › initial render-should render without exceptions" name="Main &gt; Main › initial render-should render without exceptions" time="0.108">
     </testcase>
   </testsuite>
 </testsuites>

@@ -21,7 +21,11 @@
   },
   "jest-junit": {
     "usePathForSuiteName": "true",
-    "suiteName": "WebApp"
+    "suiteName": "WebApp",
+    "uniqueOutputName": "false",
+    "classNameTemplate": "{suitename} > {classname}-{title}",
+    "titleTemplate": "{suitename} > {classname}-{title}",
+    "ancestorSeparator": " › "
   },
   "eslintConfig": {
     "extends": [
