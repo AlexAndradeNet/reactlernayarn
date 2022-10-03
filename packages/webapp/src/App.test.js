@@ -7,6 +7,6 @@ describe('Main', () => {
         ReactDOM.unmountComponentAtNode(div);
     });*/
     it("dummy test", async () => {
-        expect(true).toBeTruthy();
+        expect(false).toBeTruthy();
     });
 });
