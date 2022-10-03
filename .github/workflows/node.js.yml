@@ -28,5 +28,5 @@ jobs:
         cache: 'npm'
     - run: npm install -g yarn
     - run: yarn install
-    - run: yarn clean && yarn bs-shared
+    - run: yarn clean && yarn bs-common
     - run: yarn test
