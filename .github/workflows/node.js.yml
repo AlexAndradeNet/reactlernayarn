@@ -20,20 +20,25 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm install -g yarn
-    - run: yarn install
-    - run: yarn clean && yarn bs-common
+      # Setup
+      - name: Checkout code
+        uses: actions/checkout@v3
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+      - name: Install Yarn
+        run: npm install -g yarn
+      - name: Install dependencies
+        run: yarn install
+      - name: Install project
+        run: yarn clean && yarn bs-common
 
-    # Test
-    - name: test
-      run: yarn test:ci
+      # Test
+      - name: test
+        run: yarn test:ci
 
-    # Build
-    - name: build
-      run: yarn build-web
+      # Build
+      - name: build
+        run: yarn build-web
