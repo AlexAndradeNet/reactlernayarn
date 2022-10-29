@@ -11,7 +11,7 @@ on:
 
 jobs:
   setup:
-
+    name: setup
     runs-on: ubuntu-latest
 
     strategy:
@@ -31,9 +31,17 @@ jobs:
     - run: yarn clean && yarn bs-common
 
   test:
-    - uses: actions/setup-node@v3
-    - run: yarn test:ci
+    name: test
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v3
+      - run: yarn test:ci
 
   build:
-    - uses: actions/setup-node@v3
-    - run: yarn build-web
+    name: build
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v3
+      - run: yarn build-web
