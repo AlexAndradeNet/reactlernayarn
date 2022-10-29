@@ -11,7 +11,7 @@ on:
 
 jobs:
   setup:
-    name: setup
+    name: Pre-Pipeline checking
     runs-on: ubuntu-latest
 
     strategy:
@@ -30,18 +30,10 @@ jobs:
     - run: yarn install
     - run: yarn clean && yarn bs-common
 
-  test:
-    name: test
-    needs: setup
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/setup-node@v3
-      - run: yarn test:ci
+    # Test
+    - name: test
+    - run: yarn test:ci
 
-  build:
-    name: build
-    needs: test
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/setup-node@v3
-      - run: yarn build-web
+    # Build
+    - name: build
+    - run: yarn build-web
