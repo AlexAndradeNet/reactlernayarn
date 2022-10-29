@@ -10,8 +10,8 @@ on:
     branches: [ "dev", "stage", "master" ]
 
 jobs:
-  setup:
-    name: Pre-Pipeline checking
+  build:
+    name: Pre-Pipeline check
     runs-on: ubuntu-latest
 
     strategy:
