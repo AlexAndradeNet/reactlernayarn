@@ -26,13 +26,8 @@ jobs:
         with:
           node-version: '${{ matrix.node-version }}'
           cache: npm
-      - name: Install Yarn
-        run: npm install -g yarn
-      - name: Install dependencies
-        run: yarn install
-      - name: Install project
-        run: yarn clean && yarn bs-common
-      - name: test
-        run: 'yarn test:ci'
-      - name: build
-        run: yarn build-web
+      - run: npm install -g yarn
+      - run: yarn install
+      - run: yarn clean && yarn bs-common
+      - run: 'yarn test:ci'
+      - run: yarn build-web
