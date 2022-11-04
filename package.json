@@ -2,7 +2,24 @@
   "name": "root",
   "private": true,
   "devDependencies": {
-    "lerna": "^5.5.2"
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "husky": "^8.0.1",
+    "lerna": "^5.5.2",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "prettier-eslint": "^15.0.1",
+    "prettier-plugin-jsdoc": "^0.4.2",
+    "stylelint": "^14.14.1",
+    "stylelint-config-idiomatic-order": "^9.0.0",
+    "stylelint-config-recommended": "^9.0.0"
   },
   "workspaces": [
     "packages/*"
@@ -17,6 +34,8 @@
     "test:clean": "watchman watch-del './' ; watchman watch-project './'",
     "test-web": "cd ./packages/webapp && yarn test --watchAll=false",
     "test": "yarn test-web --coverage --reporters=default --reporters=jest-junit",
-    "build": "cd ./packages/webapp && yarn build"
+    "build": "cd ./packages/webapp && yarn build",
+    "prepare": "husky install",
+    "lint": "cd packages/common && yarn lint ; cd ../webapp && yarn lint"
   }
 }

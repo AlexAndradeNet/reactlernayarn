@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="WebApp" tests="1" failures="1" errors="0" time="0.887">
+  <testsuite name="src/App.test.js" errors="0" failures="1" skipped="0" timestamp="2022-10-03T16:06:26" time="0.29" tests="1">
+    <testcase classname="Main &gt; Main-dummy test" name="Main &gt; Main-dummy test" time="0.002">
+      <failure>Error: expect(received).toBeTruthy()
+
+Received: false
+    at Object.&lt;anonymous&gt; (/Users/alex.andrade/Documents/gitpersonal/reactlernayarn/packages/webapp/src/App.test.js:10:23)
+    at Promise.then.completed (/Users/alex.andrade/Documents/gitpersonal/reactlernayarn/node_modules/jest-circus/build/utils.js:391:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/Users/alex.andrade/Documents/gitpersonal/reactlernayarn/node_modules/jest-circus/build/utils.js:316:10)
+    at _callCircusTest (/Users/alex.andrade/Documents/gitpersonal/reactlernayarn/node_modules/jest-circus/build/run.js:218:40)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at _runTest (/Users/alex.andrade/Documents/gitpersonal/reactlernayarn/node_modules/jest-circus/build/run.js:155:3)
+    at _runTestsForDescribeBlock (/Users/alex.andrade/Documents/gitpersonal/reactlernayarn/node_modules/jest-circus/build/run.js:66:9)
+    at _runTestsForDescribeBlock (/Users/alex.andrade/Documents/gitpersonal/reactlernayarn/node_modules/jest-circus/build/run.js:60:9)
+    at run (/Users/alex.andrade/Documents/gitpersonal/reactlernayarn/node_modules/jest-circus/build/run.js:25:3)
+    at runAndTransformResultsToJestFormat (/Users/alex.andrade/Documents/gitpersonal/reactlernayarn/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:170:21)
+    at jestAdapter (/Users/alex.andrade/Documents/gitpersonal/reactlernayarn/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:82:19)
+    at runTestInternal (/Users/alex.andrade/Documents/gitpersonal/reactlernayarn/node_modules/jest-runner/build/runTest.js:389:16)
+    at runTest (/Users/alex.andrade/Documents/gitpersonal/reactlernayarn/node_modules/jest-runner/build/runTest.js:475:34)
+    at TestRunner.runTests (/Users/alex.andrade/Documents/gitpersonal/reactlernayarn/node_modules/jest-runner/build/index.js:101:12)
+    at TestScheduler.scheduleTests (/Users/alex.andrade/Documents/gitpersonal/reactlernayarn/node_modules/@jest/core/build/TestScheduler.js:333:13)
+    at runJest (/Users/alex.andrade/Documents/gitpersonal/reactlernayarn/node_modules/@jest/core/build/runJest.js:404:19)
+    at _run10000 (/Users/alex.andrade/Documents/gitpersonal/reactlernayarn/node_modules/@jest/core/build/cli/index.js:320:7)
+    at runCLI (/Users/alex.andrade/Documents/gitpersonal/reactlernayarn/node_modules/@jest/core/build/cli/index.js:173:3)
+    at Object.run (/Users/alex.andrade/Documents/gitpersonal/reactlernayarn/node_modules/jest-cli/build/cli/index.js:155:37)</failure>
+    </testcase>
+  </testsuite>
+</testsuites>

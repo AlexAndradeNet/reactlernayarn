@@ -1,0 +1,14 @@
+{
+    "eslint.validate": ["javascript", "javascriptreact", "html"],
+    "eslint.alwaysShowStatus": true,
+    "eslint.format.enable": true,
+    "eslint.packageManager": "yarn",
+    "eslint.workingDirectories": [
+      "packages/common",
+      "packages/webapp"
+    ],
+    "eslint.codeActionsOnSave.mode": "problems",
+    "prettier.arrowParens": "avoid",
+    "prettier.configPath": "prettierrc.json",
+    "prettier.ignorePath": "../../.gitignore"
+}
