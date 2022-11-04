@@ -1,54 +1,60 @@
 {
-  "name": "webapp",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "common": "^0.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  },
-  "jest": {
-    "coverageReporters": [
-      "text",
-      "cobertura"
-    ]
-  },
-  "jest-junit": {
-    "usePathForSuiteName": "true",
-    "suiteName": "WebApp",
-    "uniqueOutputName": "false",
-    "classNameTemplate": "{suitename} > {classname}-{title}",
-    "titleTemplate": "{suitename} > {classname}-{title}",
-    "ancestorSeparator": " › "
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "jest-junit": "^14.0.1",
-    "react-scripts": "^5.0.1",
-    "webpack-cli": "^3.3.2",
-    "which": "^2.0.2"
-  }
+    "name": "webapp",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "common": "^0.1.0",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test --env=jsdom",
+        "eject": "react-scripts eject",
+        "lint:js": "eslint --ignore-path ../../.gitignore . --fix",
+        "lint:json": "prettier --ignore-path ../../.gitignore **/*.json --write",
+        "lint:html": "prettier --ignore-path ../../.gitignore **/*.*htm* --write",
+        "lint:css:prettier": "prettier --ignore-path ../../.gitignore **/*.css --write",
+        "lint:css:stylelint": "stylelint --ignore-path ../../.gitignore '**/*.css' --allow-empty-input --fix",
+        "lint": "yarn lint:js ; yarn lint:json; yarn lint:html; yarn lint:css:prettier; yarn lint:css:stylelint"
+    },
+    "jest": {
+        "coverageReporters": [
+            "text",
+            "cobertura"
+        ]
+    },
+    "jest-junit": {
+        "usePathForSuiteName": "true",
+        "suiteName": "WebApp",
+        "uniqueOutputName": "false",
+        "classNameTemplate": "{suitename} > {classname}-{title}",
+        "titleTemplate": "{suitename} > {classname}-{title}",
+        "ancestorSeparator": " › "
+    },
+    "eslintConfig": {
+        "extends": [
+            "react-app",
+            "react-app/jest"
+        ]
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "devDependencies": {
+        "jest-junit": "^14.0.1",
+        "react-scripts": "^5.0.1",
+        "webpack-cli": "^3.3.2",
+        "which": "^2.0.2"
+    }
 }
